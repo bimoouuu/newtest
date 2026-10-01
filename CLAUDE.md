@@ -26,7 +26,7 @@ Cadrage validé avec l'utilisateur. Toute évolution de ce cadrage se valide ave
 | Voix → texte | faster-whisper sur GPU, en local |
 | Voix de BAM | Piper (GPL-3.0, sans impact tant que BAM reste interne), voix française masculine |
 | Cerveau | API Claude, modèle Sonnet 5.5 (`claude-sonnet-5-5`), SDK officiel `anthropic` |
-| Mail + agenda | API du fournisseur (à confirmer, voir points ouverts) |
+| Mail + agenda | API Gmail + API Google Agenda (gratuites) |
 | Stockage | SQLite |
 
 ## Budget
@@ -44,14 +44,11 @@ Cadrage validé avec l'utilisateur. Toute évolution de ce cadrage se valide ave
 
 1. **Socle vocal** : « Salut BAM » → transcription → réponse Claude → voix Piper. Tests sur le PC.
 2. **Interface** : icône barre des tâches + panneau d'historique (charte byBim) + lancement au démarrage de Windows.
-3. **Mail + agenda** (1 compte) : résumer, écrire, répondre, transférer, trier, supprimer. Exécution sur ordre explicite.
+3. **Mail + agenda** (1 compte Gmail) : résumer, écrire, répondre, transférer, trier, supprimer. Exécution sur ordre explicite.
+   - Envoyer, transférer, supprimer : BAM résume l'action en une phrase et attend « oui » avant d'exécuter.
+   - Résumer, écrire un brouillon, trier : exécution directe.
+   - Supprimer = mettre à la corbeille (récupérable), jamais de suppression définitive.
 4. **Mesure des coûts API** pendant la première semaine.
-
-## Points ouverts (à trancher avant l'étape 3)
-
-- Fournisseur mail et agenda (Gmail/Google Agenda, Outlook, autre).
-- Confirmation vocale avant les actions irréversibles (envoyer, transférer, supprimer) : en débat.
-- « Supprimer » = corbeille (récupérable) ou suppression définitive : en débat.
 
 ## Backlog (après la V1)
 
