@@ -38,19 +38,20 @@ Elles sont réservées aux membres qui ont la permission **Gérer les rôles**. 
 ### 1. Appli Discord
 
 1. Sur <https://discord.com/developers/applications>, clique sur **New Application** et nomme-la « BimouIA ».
-2. Dans l'onglet **Bot** :
+2. Dans l'onglet **Installation**, règle le **lien d'installation** sur **Aucun**, puis enregistre. Sans ce réglage, Discord refuse de rendre le bot privé.
+3. Dans l'onglet **Bot** :
    - clique sur **Reset Token** et copie le jeton dans `DISCORD_TOKEN` ;
    - décoche **Public Bot**.
 
    Aucun « Privileged Gateway Intent » n'est nécessaire.
-3. Invite le bot avec ce lien, en remplaçant `APP_ID` par l'**Application ID** (onglet General Information) :
+4. Invite le bot avec ce lien, en remplaçant `APP_ID` par l'**Application ID** (onglet General Information) :
    ```
    https://discord.com/oauth2/authorize?client_id=APP_ID&scope=bot+applications.commands&permissions=268692544
    ```
    Permissions incluses : voir les salons, envoyer des messages, gérer les messages, intégrer des liens, joindre des fichiers, voir l'historique, ajouter des réactions, gérer les rôles, mentionner les rôles. Le bot ne mentionne jamais que @notifs.
-4. Dans Paramètres du serveur → Rôles, place le rôle **BimouIA au-dessus** des rôles qu'il doit donner.
-5. Crée le rôle **@notifs**.
-6. Active le mode développeur (Paramètres → Avancés). Fais ensuite clic droit → **Copier l'identifiant** sur le serveur, sur le salon des notifications et sur le rôle @notifs.
+5. Dans Paramètres du serveur → Rôles, place le rôle **BimouIA au-dessus** des rôles qu'il doit donner.
+6. Crée le rôle **@notifs**.
+7. Active le mode développeur (Paramètres → Avancés). Fais ensuite clic droit → **Copier l'identifiant** sur le serveur, sur le salon des notifications et sur le rôle @notifs.
 
 ### 2. Twitch
 
